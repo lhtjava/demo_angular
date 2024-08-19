@@ -1,0 +1,29 @@
+<div>
+  <mat-form-field appearance="standard">
+    <mat-label>Todo</mat-label>
+    <input matInput placeholder="todo" [(ngModel)]="keyword" maxlength="9">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>9桁以内入力してください.</mat-hint>
+  </mat-form-field>
+  <button (click)="todo_add()" mat-raised-button color="primary">追加</button>
+</div>
+
+<br><br>
+<div>
+  <h3>Todo-list：</h3>
+  <ul>
+    <li *ngFor="let item of todolist; let key = index;" [hidden]="item.status">
+      <mat-checkbox class="ck" [(ngModel)]="item.status" (change)="todo_status_change()">{{item.title}}</mat-checkbox>
+      <button (click)="todo_del(key)" mat-raised-button color="warn">削除</button>
+    </li>
+  </ul>
+
+  <hr><hr><hr>
+  <h3>Done-list：</h3>
+  <ul>
+  <li *ngFor="let item of todolist; let key = index;" [hidden]="!item.status">
+      <mat-checkbox class="ck" [(ngModel)]="item.status" disabled>{{item.title | doneTime}}</mat-checkbox>
+      <button (click)="todo_del(key)" mat-raised-button color="warn">削除</button>
+    </li>
+  </ul>
+</div>

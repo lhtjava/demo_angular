@@ -1,0 +1,12 @@
+.a_home {
+    color: white;
+    margin-left: 10px;
+}
+
+.hint {
+    font-size: 70%;
+    color: white;
+    margin-left: 15px;
+    /* top: 10px;
+    position: relative; */
+}

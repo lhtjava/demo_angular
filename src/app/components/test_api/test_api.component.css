@@ -1,0 +1,41 @@
+.btn {
+    /* width: 140px; */
+    line-height: 38px;
+    text-align: center;
+    /* font-weight: bold; */
+    /* color: white; */
+    /* text-shadow:1px 1px 1px #333; */
+    border-radius: 5px;
+    margin:1vh auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+table {
+    text-align: center;
+}
+
+td, .th_name {
+    text-align: left;
+}
+ 
+table thead th {
+    padding: 5px 20px;
+    background-color: rgb(117, 117, 187);
+    font-weight: 400;
+    color: #fff;
+}
+ 
+table tbody tr td {
+    padding: 5px 20px;
+    border-top: 1px solid blue;
+}
+ 
+table tbody tr:nth-child(2n) td {
+    background-color: lightblue;
+}
+ 
+table tbody tr:last-child td {
+    border-bottom: 1px solid blue;
+}
